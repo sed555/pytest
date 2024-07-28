@@ -1,2 +1,5 @@
+
 #! /bin/sh
-echo world
+echo worlh
+echo hello
+
