@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>vim&#x4f7f;&#x7528;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h4 id="vim使用">vim使用</h4>
+<p><strong>目录</strong></p>
+<ol>
+<li><a href="#T1">模式选择</a></li>
+<li><a href="#T2">光标移动</a></li>
+<li><a href="#T3">撤回和恢复</a></li>
+<li><a href="#T4">查找和替换</a></li>
+<li><a href="#T5">保存和退出</a></li>
+<li><a href="#T6">视频演示</a></li>
+<li><a href="#T7">总结和注意点</a></li>
+</ol>
+<hr>
+<ol>
+<li><a id="T1">模式选择</a>
+<ul>
+<li>vim拥有三种模式，分别是命令行模式、末行模式和插入模式。
+<ul>
+<li>命令行模式用来执行复制、粘贴、撤回和光标移动等操作</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>末行模式用来进行保存和退出操作</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>插入模式进行编写</li>
+</ul>
+</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>使用vim打开一个编辑器就进入了命令行==模式，按i进入插入式。</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>在插入模式中按ESC键返回命令行模式。</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>在命令行模式下输入英文的冒号:，进入末行模式。</li>
+</ul>
+<blockquote></blockquote>
+</li>
+<li><a id="T2">光标移动</a>
+<ul>
+<li>在命令行模式下输入G跳到文件最后一行</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>在命令行模式下输入gg回到第一行</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>可以使用键盘的上下左右箭头键进行光标移动</li>
+</ul>
+</li>
+</ol>
+<blockquote></blockquote>
+<ol start="3">
+<li><a id="T3">撤回和恢复</a>
+<ul>
+<li>在命令行模式下使用u进行撤回操作</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>在命令行模式下使用ctrl+r进行恢复操作</li>
+</ul>
+</li>
+<li><a id="T4">查找和替换</a>
+<ul>
+<li>在命令行模式下输入/word，word就是你要查找的内容，回车就会跳到对应位置</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>例子，比如要查找你好
+<ul>
+<li>
+<blockquote>
+<p>/你好</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>在输入了/word并且回车了基础下进行输入n进行下一个查找，毕竟会有很多同名的内容</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>输入N则向上进行查找</li>
+</ul>
+</li>
+</ol>
+<blockquote></blockquote>
+<ul>
+<li>在命令行模式下输入:%s/word1/word2/gc，进行替换，word1是你文本原有的词，word2是新词，gc表示替换，加上c是替换的时候需要用户确认。</li>
+</ul>
+<blockquote></blockquote>
+<ol start="5">
+<li>
+<p><a id="T5">保存和退出</a></p>
+<ul>
+<li>在命令行模式下输入:wq 保存和退出</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>在命令行模式下输入:q 退出</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>:wq!强制保存退出</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>:q!强制退出</li>
+</ul>
+<blockquote></blockquote>
+</li>
+<li>
+<p><a id="T6">视频演示</a></p>
+<ul>
+<li>视频</li>
+</ul>
+ <iframe src="shiping.mp4" >
+ </iframe>
+</li>
+</ol>
+<blockquote></blockquote>
+<ol>
+<li><a id="T7">总结和注意点</a>
+<ul>
+<li>模式的切换，不同模式可以进行不同的操作</li>
+</ul>
+<blockquote></blockquote>
+<ul>
+<li>注意标点符号的中英文</li>
+</ul>
+</li>
+</ol>
+
+            
+            
+        </body>
+        </html>
